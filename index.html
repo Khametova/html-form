@@ -3,7 +3,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Registretion Form</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <h1 class="form-head">Registration Form</h1>
+      <form class="reg-form">
+        <label class="form-label">
+          <span class="label-caption">First name:</span>
+          <input
+            class="form-imput"
+            type="text"
+            name="user-name"
+            placeholder="Name"
+            minlength="2"
+            maxlength="32"
+            pattern="[A-Z][a-z]*"
+            required
+            autofocus
+            tabindex="1"
+          />
+        </label>
+        <label class="form-label">
+          <span class="label-caption">Last name:</span>
+          <input
+            class="form-imput"
+            type="text"
+            name="user-surname"
+            placeholder="Surname"
+            minlength="2"
+            maxlength="65"
+            pattern="[A-Z][a-z]{1,31}(-[A-z][a-z]{1,31})?"
+            autofocus
+            tabindex="2"
+          />
+        </label>
+        <label class="form-label">
+          <span class="label-caption">Email:</span>
+          <input
+            class="form-imput"
+            type="email"
+            name="user-email"
+            placeholder="mail@mail.mail"
+            tabindex="3"
+            required
+          />
+        </label>
+        <label class="form-label">
+          <span class="label-caption">Phone:</span>
+          <input
+            class="form-imput"
+            type="number"
+            name="user-phone"
+            pattern="\+380-?\d{2}-?\d{3-?\d{4}}"
+            placeholder="+380-000-0000"
+            tabindex="4"
+            required
+          />
+        </label>
+        <label class="form-label">
+          <span class="label-caption">Password:</span>
+          <input
+            class="form-imput"
+            type="password"
+            name="user-passw"
+            pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{8,16}"
+            tabindex="5"
+            required
+          />
+        </label>
+        <label class="form-label">
+          <span class="label-caption">Password confirmation:</span>
+          <input
+            class="form-imput"
+            type="password"
+            name="user-passw-conf"
+            pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{8,16}"
+            tabindex="6"
+            required
+          />
+        </label>
+        <button class="submit-btn" type="submit">Registration</button>
+      </form>
+    </main>
+  </body>
 </html>
